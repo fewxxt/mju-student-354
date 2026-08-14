@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบบริการนักศึกษา - แจ้งปัญหาการใช้งาน</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <img src="logo.png" alt="University Logo" class="brand-logo" onerror="this.style.display='none'">
+        <div>
+          <h1 class="brand-title">ระบบบริการนักศึกษา</h1>
+          <p class="brand-subtitle">MAEJO UNIVERSITY</p>
+        </div>
+      </div>
+
+      <!-- Semantic Navigation Bar (6 Menu Items) -->
+      <nav class="site-nav">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">หน้าหลัก</a></li>
+          <li class="nav-item"><a href="#">ผลการลงทะเบียน</a></li>
+          <li class="nav-item"><a href="schedule.html">ตารางเรียน</a></li>
+          <li class="nav-item"><a href="profile.html">ข้อมูลศึกษา</a></li>
+          <li class="nav-item"><a href="#">บริการวิชาการ</a></li>
+          <li class="nav-item"><a href="index.html" class="active">แจ้งปัญหาการใช้งาน</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <button class="btn-login">เข้าสู่ระบบ</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="main-layout">
+    
+    <section class="card">
+      <header class="card-header">
+        <i class="fa-solid fa-pen-to-square" style="color: #8b0000;"></i>
+        <h2 class="card-title">เสนอความคิดเห็น/แจ้งปัญหาการใช้งาน</h2>
+      </header>
+
+      <form class="card-body">
+        
+        <div class="form-group">
+          <label for="category" class="form-label">ประเภทการแจ้งปัญหา</label>
+          <div class="form-input-wrapper">
+            <select id="category" class="form-control select-control" required>
+              <option value="">กรุณาเลือกข้อมูล</option>
+              <option value="1">ปัญหาการใช้งานระบบ</option>
+              <option value="2">ข้อเสนอแนะ</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="details" class="form-label">รายละเอียดปัญหา</label>
+          <div class="form-input-wrapper">
+            <textarea id="details" rows="5" class="form-control" placeholder="กรอกรายละเอียด..." required></textarea>
+            <p class="form-timestamp">ประวัติประจำวันที่ 14 สิงหาคม พ.ศ. 2569 เวลา 18:30 น.</p>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary">
+            <i class="fa-solid fa-xmark" style="color: #dc2626;"></i>
+            <span>ยกเลิก</span>
+          </button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-check"></i>
+            <span>บันทึก</span>
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- Aside Section -->
+    <aside class="sidebar-card">
+      <h3 class="sidebar-title">
+        <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+      </h3>
+      <p class="sidebar-text">
+        ระบบปฏิบัติตามมาตรการปกปิดข้อมูลส่วนบุคคล (PDPA) เพื่อความปลอดภัยของข้อมูลนักศึกษา
+      </p>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Maejo University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

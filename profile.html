@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบบริการนักศึกษา - ข้อมูลนักศึกษา</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="top-stripe"></div>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-section">
+                <img src="logo.png" alt="University Logo" class="brand-logo" onerror="this.style.display='none'">
+                <div>
+                    <h1 class="brand-title">ระบบบริการนักศึกษา</h1>
+                    <p class="brand-subtitle">MAEJO UNIVERSITY</p>
+                </div>
+            </div>
+
+            <!-- Semantic Navigation Bar (6 Menu Items) -->
+            <nav class="site-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">หน้าหลัก</a></li>
+                    <li class="nav-item"><a href="#">ผลการลงทะเบียน</a></li>
+                    <li class="nav-item"><a href="schedule.html">ตารางเรียน</a></li>
+                    <li class="nav-item"><a href="profile.html" class="active">ข้อมูลนักศึกษา</a></li>
+                    <li class="nav-item"><a href="#">บริการวิชาการ</a></li>
+                    <li class="nav-item"><a href="index.html">แจ้งปัญหาการใช้งาน</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <button class="btn-login">เข้าสู่ระบบ</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-layout">
+
+        <!-- 🔹 ครอบสองการ์ดด้วย div คอลัมน์ซ้าย เพื่อให้การ์ดล่างชิดการ์ดบนเสมอ -->
+        <div class="left-content">
+
+            <!-- Card 1: ข้อมูลนักศึกษา -->
+            <section class="card">
+                <header class="card-header">
+                    <i class="fa-solid fa-user-check" style="color: #8b0000;"></i>
+                    <h2 class="card-title">ข้อมูลนักศึกษา</h2>
+                </header>
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr>
+                                    <td class="bg-gray" style="width: 30%;">รหัสนักศึกษา</td>
+                                    <td>6804101354</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">เลขประจำตัวประชาชน</td>
+                                    <td>1 2345 67890 12 3</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">ชื่อ-นามสกุล</td>
+                                    <td>นายนวดล ทัศนา</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">คณะ / สาขาวิชา</td>
+                                    <td>คณะวิทยาศาสตร์ / วิทยาการคอมพิวเตอร์</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">วิทยาเขต</td>
+                                    <td>เชียงใหม่</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">ระดับการศึกษา</td>
+                                    <td>ปริญญาตรี ปกติ</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">สถานะนักศึกษา</td>
+                                    <td><span style="color: #00a968; font-weight: 700;">กำลังศึกษา</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">อาจารย์ที่ปรึกษา</td>
+                                    <td>อาจารย์อรรถวิท ชังคมานนท์</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 2: ข้อมูลติดต่อ / ข้อมูลเพิ่มเติม -->
+            <section class="card">
+                <header class="card-header">
+                    <i class="fa-solid fa-address-card" style="color: #8b0000;"></i>
+                    <h2 class="card-title">ข้อมูลติดต่อ / ข้อมูลเพิ่มเติม</h2>
+                </header>
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <tbody>
+                                <tr>
+                                    <td class="bg-gray">วัน/เดือน/ปีเกิด</td>
+                                    <td>21/11/2550</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">อายุ</td>
+                                    <td>18 ปี</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray" style="width: 30%;">ที่อยู่ปัจจุบัน</td>
+                                    <td>33/2 ซอย13 ถนนเทศบาล2 ตำบลในเมือง อำเมือง จังหวัดกำแพงเพชร</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">รหัสไปรษณีย์ </td>
+                                    <td>62000</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">เบอร์โทรศัพท์</td>
+                                    <td>094-854-8706</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">อีเมลมหาวิทยาลัย</td>
+                                    <td>mju6804101354@mju.ac.th</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">ชื่อบิดา</td>
+                                    <td>นายสิทธิชัย ทัศนา</td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-gray">ชื่อมารดา</td>
+                                    <td>นางสาวชลธิชา อยู่</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </div> <!-- จบ left-content -->
+
+        <!-- 🟩 Sidebar ฝั่งขวา (Privacy Policy) -->
+        <aside class="sidebar-card">
+            <h3 class="sidebar-title">
+                <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+            </h3>
+            <p class="sidebar-text">
+                ระบบปฏิบัติตามมาตรการปกปิดข้อมูลส่วนบุคคล (PDPA) เพื่อความปลอดภัยของข้อมูลนักศึกษา
+            </p>
+        </aside>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Maejo University. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตารางเรียนและตารางสอบ - ระบบบริการนักศึกษา</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <img src="logo.png" alt="MJU Logo" style="width:36px; height:36px;" onerror="this.style.display='none'">
+        <div>
+          <h1 class="brand-title">ระบบบริการนักศึกษา</h1>
+          <p class="brand-subtitle">MAEJO UNIVERSITY</p>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">หน้าหลัก</a></li>
+          <li class="nav-item"><a href="#">ผลการลงทะเบียน</a></li>
+          <li class="nav-item"><a href="schedule.html" class="active">ตารางเรียน</a></li>
+          <li class="nav-item"><a href="profile.html">ข้อมูลศึกษา</a></li>
+          <li class="nav-item"><a href="#">บริการวิชาการ</a></li>
+          <li class="nav-item"><a href="index.html">แจ้งปัญหาการใช้งาน</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-login">เข้าสู่ระบบ</button>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="main-layout">
+    
+    <div class="left-content">
+      
+      <!-- Card 1: ข้อมูลตารางเรียน -->
+      <section class="card">
+        <header class="card-header">
+          <i class="fa-solid fa-graduation-cap" style="color:#8b0000;"></i>
+          <h2 class="card-title">ข้อมูลตารางเรียน</h2>
+        </header>
+        <div class="card-body">
+          <div class="info-grid">
+            <div class="info-item"><span class="label">ชื่อ-นามสกุล:</span> นวดล ทัศนา</div>
+            <div class="info-item"><span class="label">สถานภาพ:</span> <span class="badge-green">กำลังศึกษา</span></div>
+            <div class="info-item"><span class="label">คณะ / หลักสูตร:</span> วิทยาศาสตร์ (วท.บ. วิทยาการคอมพิวเตอร์)</div>
+            <div class="info-item"><span class="label">อาจารย์ที่ปรึกษา:</span> อาจารย์อรรถวิท ชังคมานนท์</div>
+          </div>
+
+          <div class="filter-bar">
+            <div>
+              <span class="label" style="font-size:0.85rem; font-weight:700;">ปีการศึกษา / ภาค: </span>
+              <select class="select-term">
+                <option selected>2569 / ภาคเรียนที่ 1</option>
+                <option>2568 / ภาคเรียนที่ 2</option>
+              </select>
+            </div>
+            <div class="date-tag">
+              <i class="fa-regular fa-calendar"></i> <strong>ระหว่าง:</strong> 29/6/2569 - 5/7/2569
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 2: ตารางเรียนประจำสัปดาห์ -->
+      <section class="card">
+        <header class="card-header">
+          <i class="fa-regular fa-clock" style="color:#8b0000;"></i>
+          <h2 class="card-title">ตารางเรียนประจำสัปดาห์</h2>
+        </header>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="timetable">
+              <thead>
+                <tr>
+                  <th style="width:70px;">วัน/เวลา</th>
+                  <th>08:00-09:00</th>
+                  <th>09:00-10:00</th>
+                  <th>10:00-11:00</th>
+                  <th>11:00-12:00</th>
+                  <th style="width:60px;">12:00-13:00</th>
+                  <th>13:00-14:00</th>
+                  <th>14:00-15:00</th>
+                  <th>15:00-16:00</th>
+                  <th>16:00-17:00</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- จันทร์ -->
+                <tr>
+                  <td class="day-col day-mon">จันทร์</td>
+                  <td></td>
+                  <td colspan="3">
+                    <div class="subject-box c-blue">
+                      <span class="code">10301231</span>
+                      <span class="name">เว็บเทคโนโลยี (Lab)</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td class="break-col">พัก</td>
+                  <td colspan="2">
+                    <div class="subject-box c-pink">
+                      <span class="code">10301225</span>
+                      <span class="name">วิศวกรรมซอฟต์แวร์ (Lab)</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td colspan="2"></td>
+                </tr>
+                <!-- อังคาร -->
+                <tr>
+                  <td class="day-col day-tue">อังคาร</td>
+                  <td colspan="2">
+                    <div class="subject-box c-green">
+                      <span class="code">10301211</span>
+                      <span class="name">คณิตศาสตร์สำหรับวิทย์คอมฯ</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> อาคาร 3203 (141) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <div class="subject-box c-yellow">
+                      <span class="code">10700313</span>
+                      <span class="name">ภาษาอังกฤษเชิงวิทยาศาสตร์ฯ</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> อาคาร 80-501 (147) | กลุ่ม 2</span>
+                    </div>
+                  </td>
+                  <td class="break-col">พัก</td>
+                  <td colspan="2">
+                    <div class="subject-box c-purple">
+                      <span class="code">10301223</span>
+                      <span class="name">ฐานข้อมูลโครงสร้างเชิงสัมพันธ์</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <div class="subject-box c-orange">
+                      <span class="code">10301222</span>
+                      <span class="name">โครงสร้างข้อมูลและอัลกอริทึม</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                </tr>
+                <!-- พุธ -->
+                <tr>
+                  <td class="day-col day-wed">พุธ</td>
+                  <td colspan="2"></td>
+                  <td colspan="2">
+                    <div class="subject-box c-orange">
+                      <span class="code">10301222</span>
+                      <span class="name">โครงสร้างข้อมูลและอัลกอริทึม</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> อาคาร 3203 (141) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td class="break-col">พัก</td>
+                  <td colspan="4"></td>
+                </tr>
+                <!-- พฤหัสบดี -->
+                <tr>
+                  <td class="day-col day-thu">พฤหัสฯ</td>
+                  <td></td>
+                  <td colspan="3">
+                    <div class="subject-box c-purple">
+                      <span class="code">10301223</span>
+                      <span class="name">ฐานข้อมูลโครงสร้างเชิงสัมพันธ์</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td class="break-col">พัก</td>
+                  <td colspan="2">
+                    <div class="subject-box c-blue">
+                      <span class="code">10301231</span>
+                      <span class="name">เว็บเทคโนโลยี (Lab)</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td colspan="2"></td>
+                </tr>
+                <!-- ศุกร์ -->
+                <tr>
+                  <td class="day-col day-fri">ศุกร์</td>
+                  <td colspan="2">
+                    <div class="subject-box c-green">
+                      <span class="code">10301211</span>
+                      <span class="name">คณิตศาสตร์สำหรับวิทย์คอมฯ</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> อาคาร 3203 (141) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <div class="subject-box c-yellow">
+                      <span class="code">10700313</span>
+                      <span class="name">ภาษาอังกฤษเชิงวิทยาศาสตร์ฯ</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> อาคาร 80-501 (147) | กลุ่ม 2</span>
+                    </div>
+                  </td>
+                  <td class="break-col">พัก</td>
+                  <td colspan="3">
+                    <div class="subject-box c-pink">
+                      <span class="code">10301225</span>
+                      <span class="name">วิศวกรรมซอฟต์แวร์ (Lab)</span>
+                      <span class="room"><i class="fa-solid fa-location-dot"></i> Lab คอม3-4 (105) | กลุ่ม 1</span>
+                    </div>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 3: กำหนดการสอบ -->
+      <section class="card">
+        <header class="card-header">
+          <i class="fa-solid fa-file-pen" style="color:#8b0000;"></i>
+          <h2 class="card-title">กำหนดการสอบกลางภาค และ ปลายภาค</h2>
+        </header>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="exam-table">
+              <thead>
+                <tr>
+                  <th style="width:12%; text-align:center;">รหัสวิชา</th>
+                  <th style="width:38%;">ชื่อรายวิชา</th>
+                  <th style="width:8%; text-align:center;">กลุ่ม</th>
+                  <th style="width:210px; text-align:center;">สอบกลางภาค (Midterm)</th>
+                  <th style="width:210px; text-align:center;">สอบปลายภาค (Final)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:center;"><strong>10301211</strong></td>
+                  <td>คณิตศาสตร์สำหรับวิทยาการคอมพิวเตอร์<br><span style="font-size:0.75rem; color:#64748b;">Mathematics for Computer Science</span></td>
+                  <td style="text-align:center;">1</td>
+                  <td>
+                    <div class="exam-badge">
+                      <i class="fa-regular fa-calendar-check"></i> 28 ส.ค. 2569<br>
+                      <i class="fa-regular fa-clock"></i> 08:00 - 11:00 น.
+                    </div>
+                  </td>
+                  <td>
+                    <div class="exam-badge">
+                      <i class="fa-regular fa-calendar-check"></i> 27 ต.ค. 2569<br>
+                      <i class="fa-regular fa-clock"></i> 08:00 - 11:00 น.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><strong>10301222</strong></td>
+                  <td>โครงสร้างข้อมูลและอัลกอริทึม<br><span style="font-size:0.75rem; color:#64748b;">Data Structure and Algorithm</span></td>
+                  <td style="text-align:center;">1</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                  <td>
+                    <div class="exam-badge">
+                      <i class="fa-regular fa-calendar-check"></i> 20 ต.ค. 2569<br>
+                      <i class="fa-regular fa-clock"></i> 12:00 - 15:00 น.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><strong>10301223</strong></td>
+                  <td>ฐานข้อมูลโครงสร้างเชิงสัมพันธ์<br><span style="font-size:0.75rem; color:#64748b;">Structure Relational Database</span></td>
+                  <td style="text-align:center;">1</td>
+                  <td>
+                    <div class="exam-badge">
+                      <i class="fa-regular fa-calendar-check"></i> 26 ส.ค. 2569<br>
+                      <i class="fa-regular fa-clock"></i> 15:30 - 18:30 น.
+                    </div>
+                  </td>
+                  <td>
+                    <div class="exam-badge">
+                      <i class="fa-regular fa-calendar-check"></i> 22 ต.ค. 2569<br>
+                      <i class="fa-regular fa-clock"></i> 15:30 - 18:30 น.
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><strong>10301225</strong></td>
+                  <td>วิศวกรรมซอฟต์แวร์<br><span style="font-size:0.75rem; color:#64748b;">Software Engineering</span></td>
+                  <td style="text-align:center;">1</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><strong>10301231</strong></td>
+                  <td>เว็บเทคโนโลยี<br><span style="font-size:0.75rem; color:#64748b;">Web Technology</span></td>
+                  <td style="text-align:center;">1</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                </tr>
+                <tr>
+                  <td style="text-align:center;"><strong>10700313</strong></td>
+                  <td>ภาษาอังกฤษเชิงวิทยาศาสตร์และนวัตกรรม<br><span style="font-size:0.75rem; color:#64748b;">English for Science and Innovation</span></td>
+                  <td style="text-align:center;">2</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                  <td style="text-align:center; color:#94a3b8;">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="legend-bar">
+            <strong>สัญลักษณ์ประเภทการสอน:</strong>
+            <span><code>C</code> Lecture</span>
+            <span><code>L</code> Lab</span>
+            <span><code>R</code> ประชุม</span>
+            <span><code>S</code> Self Study</span>
+            <span><code>T</code> ติว</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar-card">
+      <h3 class="sidebar-title">
+        <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+      </h3>
+      <p class="sidebar-text">
+        ระบบปฏิบัติตามมาตรการปกปิดข้อมูลส่วนบุคคล (PDPA) เพื่อความปลอดภัยของข้อมูลนักศึกษา
+      </p>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Maejo University. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

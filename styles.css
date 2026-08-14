@@ -1,0 +1,826 @@
+/* ==========================================================
+   1. BASE & MOBILE-FIRST STYLES (< 768px)
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background-color: #f4f6f8;
+  color: #333333;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p, h1, h2, h3, span, a, td, th {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Header & Navigation */
+.top-stripe {
+  height: 5px;
+  background-color: #00a968;
+  width: 100%;
+}
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8b0000;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #006837;
+  letter-spacing: 0.5px;
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-bottom: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  color: #8b0000;
+  font-weight: 700;
+  border-bottom: 2px solid #8b0000;
+}
+
+.btn-login {
+  border: 1px solid #9ca3af;
+  background-color: transparent;
+  color: #1f2937;
+  padding: 0.35rem 1.25rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-login:hover {
+  background-color: #f9fafb;
+}
+
+/* Layout Structure */
+.main-layout {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card Elements */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #fff5f5;
+  border-bottom: 1px solid #fecdd3;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-title {
+  color: #8b0000;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Form Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  border: 1px solid #9ca3af;
+  border-radius: 4px;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #00a968;
+}
+
+.form-timestamp {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-align: right;
+  margin-top: 0.35rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.4rem 1.25rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+  border: 1px solid transparent;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+.btn-primary {
+  background-color: #8b0000;
+  color: #ffffff;
+}
+
+/* Sidebar Styles */
+.sidebar-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.sidebar-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #006837;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #00a968;
+  padding-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sidebar-text {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Data Table Styles */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.data-table th, .data-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.data-table th, .data-table td.bg-gray {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1f2937;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  margin-top: auto;
+}
+
+/* ==========================================================
+   2. TABLET RESPONSIVE (768px - iPad)
+   ========================================================== */
+@media (min-width: 768px) {
+  .form-group {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form-label {
+    width: 30%;
+    text-align: right;
+    padding-top: 0.4rem;
+    padding-right: 1rem;
+  }
+
+  .form-input-wrapper {
+    width: 70%;
+  }
+
+  .form-control.select-control {
+    width: 60%;
+  }
+}
+
+/* ==========================================================
+   3. DESKTOP RESPONSIVE (1024px - 1440px Mac)
+   ========================================================== */
+@media (min-width: 1024px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.25rem 1rem;
+  }
+
+  .site-nav {
+    width: auto;
+  }
+
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 2rem 1.5rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+}
+
+/* คลาสสำหรับรวมการ์ดฝั่งซ้ายให้เรียงต่อกันสวยงาม */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* ระยะห่างระหว่างการ์ดบนกับล่าง */
+}
+
+/* ==========================================================
+   SYSTEM BASE STYLING
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Nav */
+.top-stripe {
+  height: 5px;
+  background-color: #00a968;
+}
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1.5rem;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #8b0000;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #006837;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.nav-item a.active, .nav-item a:hover {
+  color: #8b0000;
+  font-weight: 700;
+  border-bottom: 2px solid #8b0000;
+}
+
+.btn-login {
+  border: 1px solid #9ca3af;
+  background: transparent;
+  padding: 0.35rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Layout System */
+.main-layout {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0; /* ป้องกัน Flex/Grid Child ขยายตัวเกินคอนเทนเนอร์ */
+}
+
+/* Card Component */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #fff5f5;
+  border-bottom: 1px solid #fecdd3;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-title {
+  color: #8b0000;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* 1. Profile Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+  font-size: 0.88rem;
+}
+
+.info-item span.label {
+  font-weight: 700;
+  color: #374151;
+}
+
+.badge-green {
+  background-color: #d1fae5;
+  color: #047857;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.filter-bar {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.select-term {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.date-tag {
+  font-size: 0.82rem;
+  background-color: #f3f4f6;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  color: #4b5563;
+}
+
+/* 2. Timetable */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.timetable {
+  width: 100%;
+  min-width: 900px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.timetable th {
+  background-color: #374151;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.2rem;
+  border: 1px solid #4b5563;
+  text-align: center;
+}
+
+.timetable td {
+  border: 1px solid #e5e7eb;
+  height: 65px;
+  vertical-align: top;
+  padding: 3px;
+  background-color: #fafafa;
+}
+
+.timetable .day-col {
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 0.82rem;
+}
+
+.day-mon { background-color: #eab308; }
+.day-tue { background-color: #ec4899; }
+.day-wed { background-color: #10b981; }
+.day-thu { background-color: #f97316; }
+.day-fri { background-color: #3b82f6; }
+
+.break-col {
+  background-color: #f3f4f6;
+  text-align: center;
+  vertical-align: middle !important;
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+.subject-box {
+  height: 100%;
+  border-radius: 5px;
+  padding: 0.3rem 0.4rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subject-box .code { font-weight: 700; font-size: 0.75rem; }
+.subject-box .name { font-size: 0.72rem; font-weight: 600; line-height: 1.2; }
+.subject-box .room { font-size: 0.68rem; opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.c-blue { background: #e0f2fe; color: #0369a1; border-left: 3px solid #0284c7; }
+.c-pink { background: #fce7f3; color: #be185d; border-left: 3px solid #db2777; }
+.c-green { background: #dcfce7; color: #15803d; border-left: 3px solid #16a34a; }
+.c-yellow { background: #fef3c7; color: #b45309; border-left: 3px solid #d97706; }
+.c-purple { background: #f3e8ff; color: #6b21a8; border-left: 3px solid #9333ea; }
+.c-orange { background: #ffedd5; color: #c2410c; border-left: 3px solid #ea580c; }
+
+/* 3. Exam Table */
+.exam-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.exam-table th {
+  background-color: #f8fafc;
+  color: #334155;
+  font-weight: 700;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.exam-table td {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.exam-badge {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 0.35rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.legend-bar {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: #64748b;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.legend-bar code {
+  background-color: #f1f5f9;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-weight: 700;
+  color: #334155;
+}
+
+/* Sidebar & Footer */
+.sidebar-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #006837;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.sidebar-text {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.site-footer {
+  background: #1f2937;
+  color: #9ca3af;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  margin-top: auto;
+}
+
+/* Responsive Tablet/Mobile */
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   MOBILE CARD VIEW (ปรับตารางให้แสดงผลครบ 100% บนมือถือ)
+   ========================================================== */
+@media (max-width: 768px) {
+  
+  /* --- 1. ปรับตารางเรียนประจำสัปดาห์ --- */
+  .mobile-hint {
+    display: none !important; /* ซ่อนคำแนะนำเรื่องสไลด์ */
+  }
+
+  .table-responsive {
+    border: none;
+    overflow-x: visible;
+  }
+
+  .timetable, 
+  .timetable tbody, 
+  .timetable tr, 
+  .timetable td {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* ซ่อน Header เวลา 08:00-17:00 บนมือถือ */
+  .timetable thead {
+    display: none;
+  }
+
+  /* จัดกลุ่มแต่ละวันให้อยู่ในการ์ดเดียวกัน */
+  .timetable tr {
+    margin-bottom: 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+
+  /* แถบหัวข้อวัน (จันทร์ - ศุกร์) */
+  .timetable td.day-col {
+    width: 100% !important;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .timetable td {
+    height: auto;
+    padding: 0.4rem 0.6rem;
+    border: none;
+    border-bottom: 1px dashed #f3f4f6;
+  }
+
+  /* ซ่อนช่องว่างที่ไม่มีเรียน และช่องพักเที่ยงบนมือถือ */
+  .timetable td:empty, 
+  .timetable td.break-col {
+    display: none;
+  }
+
+  /* ปรับการ์ดรายวิชา */
+  .subject-box {
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+  }
+
+  .subject-box .code {
+    font-size: 0.8rem;
+  }
+
+  .subject-box .name {
+    font-size: 0.85rem;
+    margin: 0.2rem 0;
+  }
+
+  .subject-box .room {
+    font-size: 0.75rem;
+    white-space: normal; /* ยอมให้ข้อความขึ้นบรรทัดใหม่ได้ ไม่โดนตัด */
+  }
+
+  /* --- 2. ปรับตารางกำหนดการสอบ --- */
+  .exam-table, 
+  .exam-table tbody, 
+  .exam-table tr, 
+  .exam-table td {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .exam-table thead {
+    display: none;
+  }
+
+  .exam-table tr {
+    margin-bottom: 0.85rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+
+  .exam-table td {
+    border: none;
+    padding: 0.25rem 0;
+    text-align: left !important;
+  }
+
+  .exam-table td:first-child {
+    font-size: 0.95rem;
+    color: #8b0000;
+  }
+
+  .exam-badge {
+    margin-top: 0.25rem;
+  }
+}
